@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleApp;
+using System;
 using System.Linq;
 using Xunit;
 
@@ -9,13 +10,14 @@ namespace UnitTestProject1
         [Fact(DisplayName = "Successful test")]
         public void XTestMethod1()
         {
-            Assert.True(true);
+            var a = Program.Sum(2, 2);
+            Assert.Equal(4, a);
         }
 
         [Fact(DisplayName = "Failed test")]
         public void XTestFail()
         {
-           // Assert.True(false);
+            //Assert.True(false);
         }
 
         //[Theory(DisplayName = "DynamicTest")]
