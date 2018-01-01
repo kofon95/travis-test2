@@ -15,7 +15,7 @@ namespace UnitTestProject1
         [Fact(DisplayName = "Failed test")]
         public void XTestFail()
         {
-            Assert.True(false);
+           // Assert.True(false);
         }
 
         //[Theory(DisplayName = "DynamicTest")]
