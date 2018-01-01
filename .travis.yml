@@ -3,5 +3,5 @@ solution: SimpleApp.sln
 mono: none
 dotnet: 2.1.2
 script:
-    dotnet test Test1
-    dotnet test Test2
+ -  dotnet test Test1
+ -  dotnet test Test2
