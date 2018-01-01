@@ -4,11 +4,11 @@ dotnet: 2.0.0
 install:
   - nuget restore SimpleApp.sln
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
+  - dotnet restore
 script:
   #- xbuild /p:Configuration=Release SimpleApp.sln
   #- mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
-  - ls StandartClassLibrary/bin
   - dotnet test
+  - ls StandartClassLibrary/bin
   - ls StandartClassLibrary/bin/Debug
-  - dotnet restore ./StandartClassLibrary
   - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
