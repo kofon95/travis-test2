@@ -8,5 +8,6 @@ script:
   - xbuild /p:Configuration=Release SimpleApp.sln
   - ls ./UnitTestProject1/bin/Release/
   - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
-  - dotnet restore
-  - dotnet test
+  - dotnet restore ./UnitTestProject1
+  - dotnet test ./UnitTestProject1 --configuration Release --framework netcoreapp2.0
+  - dotnet test ./UnitTestProject1 --framework netcoreapp2.0
