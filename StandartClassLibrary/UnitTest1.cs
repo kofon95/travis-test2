@@ -18,15 +18,16 @@ namespace UnitTestProject1
         void SumTuple()
         {
             Assert.Equal(4, Program.Sum((2, 2)));
-#if NET452
-            Assert.True(false);
-#endif
         }
 
         [Fact(DisplayName = "Failed test")]
         public void XTestFail()
         {
-            //Assert.True(false);
+#if NET452
+            Assert.True(false, "net452");
+#else
+            Assert.True(false, "netcoreapp");
+#endif
         }
 
         //[Theory(DisplayName = "DynamicTest")]
