@@ -3,7 +3,7 @@ solution: SimpleApp.sln
 install:
   - nuget restore SimpleApp.sln
   - nuget install xunit.runners -Version 2.0.0 -OutputDirectory testrunner
-  - nuget xunit.runner.console -OutputDirectory testrunner
+  - nuget install xunit.runner.console -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release SimpleApp.sln
   - ls ./testrunner/
