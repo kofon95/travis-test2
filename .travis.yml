@@ -7,7 +7,8 @@ install:
 script:
   #- xbuild /p:Configuration=Release SimpleApp.sln
   #- mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
-  - dotnet test
   - ls StandartClassLibrary/bin
+  - dotnet test
+  - ls StandartClassLibrary/bin/Debug
   - dotnet restore ./StandartClassLibrary
   - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
