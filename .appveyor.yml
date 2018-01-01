@@ -8,3 +8,4 @@ build_script:
 
 test_script:
   - dotnet test StandartClassLibrary --framework netcoreapp2.0
+  - dotnet test StandartClassLibrary --framework net452
