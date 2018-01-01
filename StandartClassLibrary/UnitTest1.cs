@@ -24,7 +24,7 @@ namespace UnitTestProject1
         public void XTestFail()
         {
 #if NET452
-            Assert.True(false, "!!!! net452 !!!!");
+            Assert.True(!false, "!!!! net452 !!!!");
 #else
             Assert.True(false, "!!!! netcoreapp !!!!");
 #endif
