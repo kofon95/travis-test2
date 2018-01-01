@@ -11,6 +11,13 @@ namespace SimpleApp
         public static int Sum(int a, int b) => a + b;
         static void Main(string[] args)
         {
+#if NET45
+            Console.WriteLine("net45");
+#elif NET452
+            Console.WriteLine("net452");
+#else
+            Console.WriteLine("other");
+#endif
         }
     }
 }
