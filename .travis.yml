@@ -1,4 +1,6 @@
 language: csharp
-
+solution: SimpleApp.sln
+mono: none
+dotnet: 2
 script:
     dotnet test
