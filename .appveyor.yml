@@ -5,7 +5,6 @@ configuration:
 
 build_script:
   - dotnet build
-  - xbuild /p:Configuration=Release SimpleApp.sln
   - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
 
 test_script:
