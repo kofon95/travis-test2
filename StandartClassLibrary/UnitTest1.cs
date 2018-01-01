@@ -14,6 +14,12 @@ namespace UnitTestProject1
             Assert.Equal(4, a);
         }
 
+        [Fact(DisplayName = "Sum of Tuple")]
+        void SumTuple()
+        {
+            Assert.Equal(4, Program.Sum((2, 2)));
+        }
+
         [Fact(DisplayName = "Failed test")]
         public void XTestFail()
         {

@@ -9,6 +9,7 @@ namespace SimpleApp
     public class Program
     {
         public static int Sum(int a, int b) => a + b;
+        public static int Sum((int a, int b) v) => v.a + v.b;
         static void Main(string[] args)
         {
 #if NET45
