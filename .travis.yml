@@ -1,6 +1,7 @@
 language: csharp
 solution: SimpleApp.sln
 mono: none
-dotnet: 1.1.5
+dotnet: 2.1.2
 script:
-    dotnet test
+    dotnet test Test1
+    dotnet test Test2
