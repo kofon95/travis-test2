@@ -1,7 +1,0 @@
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\bin\Debug\SimpleApp.exe.config
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\bin\Debug\SimpleApp.exe
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\bin\Debug\SimpleApp.pdb
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\obj\Debug\SimpleApp.csprojResolveAssemblyReference.cache
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\obj\Debug\SimpleApp.csproj.CoreCompileInputs.cache
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\obj\Debug\SimpleApp.exe
-C:\Users\123\Documents\Visual Studio 2017\Projects\SimpleApp\SimpleApp\obj\Debug\SimpleApp.pdb
