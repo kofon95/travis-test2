@@ -7,12 +7,11 @@ install:
 script:
   #- xbuild /p:Configuration=Release SimpleApp.sln
   #- mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
-  - which dotnet
-  - ls ./UnitTestProject1/bin/Release/
-  - dotnet restore ./UnitTestProject1
-  - ls ./UnitTestProject1/bin/Release/
-  - dotnet test ./UnitTestProject1 --configuration Release --framework netcoreapp2.0
-  - dotnet test ./UnitTestProject1 --framework netcoreapp2.0
+  - ls ./XUnitTestProject1/bin/Release/
+  - dotnet restore ./XUnitTestProject1
+  - ls ./XUnitTestProject1/bin/Release/
+  - dotnet test ./XUnitTestProject1 --configuration Release --framework netcoreapp2.0
+  - dotnet test ./XUnitTestProject1 --framework netcoreapp2.0
   - echo --------------
     #####
   - xbuild /p:Configuration=Release SimpleApp.sln
