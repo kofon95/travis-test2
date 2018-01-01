@@ -5,6 +5,8 @@ install:
   - nuget install xunit.runners -Version 2.0.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release SimpleApp.sln
-  - ls ./testrunner/xunit.runners.2.0.0/tools/
+  - ls ./testrunner/
+  - tree ./testrunner
+  - ls ./testrunner/xunit.runners.2.0.0/
   - ls ./UnitTestProject1/bin/Release/
   - mono ./testrunner/xunit.runners.2.0.0/tools/xunit.console.clr4.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
