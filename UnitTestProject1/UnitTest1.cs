@@ -18,12 +18,12 @@ namespace UnitTestProject1
             Assert.True(false);
         }
 
-        [Theory(DisplayName = "DynamicTest")]
-        [InlineData(true)]
-        [InlineData(false)]
-        public void DynamicTest(bool success)
-        {
-            Assert.True(success);
-        }
+        //[Theory(DisplayName = "DynamicTest")]
+        //[InlineData(true)]
+        //[InlineData(false)]
+        //public void DynamicTest(bool success)
+        //{
+        //    Assert.True(success);
+        //}
     }
 }

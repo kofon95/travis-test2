@@ -1,12 +1,11 @@
 language: csharp
 solution: SimpleApp.sln
+dotnet: 2.0.0
 install:
   - nuget restore SimpleApp.sln
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release SimpleApp.sln
-  - ls ./testrunner/
-  - ls ./testrunner/xunit.runner.2.3.1/
   - ls ./UnitTestProject1/bin/Release/
   - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./UnitTestProject1/bin/Release/UnitTestProject1.dll
   - dotnet ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp1.0/xunit.console.dll ./UnitTestProject1/bin/Release/UnitTestProject1.dll
