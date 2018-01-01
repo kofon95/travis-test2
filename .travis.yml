@@ -1,2 +1,5 @@
 language: csharp
 solution: SimpleApp.sln
+
+script:
+    dotnet test
