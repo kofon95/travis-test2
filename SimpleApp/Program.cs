@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleApp
 {
@@ -10,17 +6,26 @@ namespace SimpleApp
     {
         public static int Sum(int a, int b) => a + b;
         public static int Sum((int a, int b) v) => v.a + v.b;
-        static void Main(string[] args)
+        public static string Run()
         {
-            var a = (3, 6);
-#if NET45
-            Console.WriteLine("net45: " + a);
+            var a = (1, 6);
+            string result;
+#if NET35
+            result = "net35";
+#elif NET40
+            result = "net40";
+#elif NET45
+            result = "net45";
 #elif NET452
-            Console.WriteLine("net452: " + a);
+            result = "net452";
+#elif NET46
+            result = "net46";
+#elif NET461
+            result = "net461";
 #else
-            Console.WriteLine("other: " + a);
+            result = "other";
 #endif
-            Console.ReadKey();
+            return $"{result}: {a}";
         }
     }
 }

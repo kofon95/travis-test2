@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SimpleApp</id>
+    <version>1.0.5</version>
+    <title>SimpleApp title</title>
+    <authors>me</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<summary>Hoho1</summary>
+    <description>some desc</description>
+    <releaseNotes>some release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>program sagid</tags>
+    <dependencies>
+      <dependency id="System.ValueTuple" version="[4.4,5)"/>
+    </dependencies>
+  </metadata>
+<!---  <files>
+    <file src="lib\**" target="lib/{framework name}[{version}]"/>
+  </files>
+  -->
+</package>
