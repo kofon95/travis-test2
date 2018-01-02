@@ -2,6 +2,7 @@ language: csharp
 solution: SimpleApp.sln
 mono: 5.0.0
 dotnet: 2.0.0
+msbuild: 15.5.180
 
 install:
   - nuget restore SimpleApp.sln
