@@ -10,11 +10,9 @@ install:
 
 script:
   - echo "--------"
-  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
-  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
-  - xbuild /p:Configuration=Release SimpleApp.sln
-  - xbuild /p:Configuration=Release SimpleApp.sln --framework net452
-  - xbuild /p:Configuration=Release SimpleApp.sln --framework netcoreapp2.0
+#  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
+#  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
+#  - xbuild /p:Configuration=Release SimpleApp.sln
   - ls StandartClassLibrary/bin/Release
   - ls StandartClassLibrary/bin/Release/net452
   - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
