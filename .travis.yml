@@ -6,7 +6,7 @@ dotnet: 2.0.0
 install:
   - nuget restore SimpleApp.sln
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
-  - dotnet restore
+#  - dotnet restore
 
 script:
   - echo "--------"
