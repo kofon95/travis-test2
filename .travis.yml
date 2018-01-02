@@ -14,10 +14,9 @@ script:
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
   - ls StandartClassLibrary/bin/Release
-  - dotnet build --configuration Release --framework net452
+  - dotnet build --configuration Release --framework netcoreapp2.0
   - ls StandartClassLibrary/bin/Release
-  - dotnet build --configuration Release
-#  - dotnet msbuild ./StandartClassLibrary /p:Configuration=Release
+  - dotnet msbuild /p:Configuration=Release
   - ls StandartClassLibrary/bin/Release
   - ls StandartClassLibrary/bin/Release/net452
 #  - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
