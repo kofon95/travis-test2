@@ -15,13 +15,7 @@ script:
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
 #  - dotnet build --configuration Release --framework netcoreapp2.0
-  - xbuild /p:Configuration=Release
-  - ls StandartClassLibrary/bin/Release
-  - ls StandartClassLibrary/bin/Release/net452
-#  - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./StandartClassLibrary/bin/Release/net452/StandartClassLibrary.dll
-  - echo "---------"
-  - xbuild /p:Configuration=Release SimpleApp.sln
+  - dotnet build --configuration Release --framework net452
   - ls StandartClassLibrary/bin/Release
   - ls StandartClassLibrary/bin/Release/net452
 #  - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
