@@ -6,14 +6,14 @@ dotnet: 2.0.0
 install:
   - nuget restore SimpleApp.sln
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
-#  - dotnet restore
+  - dotnet restore
 
 script:
   - echo "--------"
-#  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
-#  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
+  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
+  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
 #  - xbuild /p:Configuration=Release SimpleApp.sln
   - ls StandartClassLibrary/bin/Release
   - ls StandartClassLibrary/bin/Release/net452
-  - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
+#  - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
   - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./StandartClassLibrary/bin/Release/net452/StandartClassLibrary.dll
