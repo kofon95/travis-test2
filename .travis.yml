@@ -18,5 +18,7 @@ script:
   - dotnet msbuild /p:configuration=Release /p:targetframework=net452 SimpleApp
   - ls StandartClassLibrary/bin/Release
   - ls StandartClassLibrary/bin/Release/net452
-#  - msbuild /p:Configuration=Release SimpleApp.sln   # output: Release/net452
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./StandartClassLibrary/bin/Release/net452/StandartClassLibrary.dll
+  - msbuild /p:Configuration=Release /p:targetframework=net452 SimpleApp.sln   # output: Release/net452
+  - ls StandartClassLibrary/bin/Release
+  - ls StandartClassLibrary/bin/Release/net452
+#  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./StandartClassLibrary/bin/Release/net452/StandartClassLibrary.dll
