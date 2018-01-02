@@ -14,7 +14,7 @@ script:
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
   - ls StandartClassLibrary/bin/Release
-  - dotnet restore
+#  - dotnet restore
   - ls StandartClassLibrary/bin/Release
 #  - dotnet build --configuration Release --framework netcoreapp2.0
   - ls StandartClassLibrary/bin/Release
