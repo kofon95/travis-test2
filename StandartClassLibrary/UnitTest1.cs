@@ -20,7 +20,7 @@ namespace UnitTestProject1
             Assert.Equal(4, Program.Sum((2, 2)));
         }
 
-        [Fact(DisplayName = "Failed test", Skip = "both two fails")]
+        [Fact(DisplayName = "Failed test")]
         public void XTestFail()
         {
 #if NET452
