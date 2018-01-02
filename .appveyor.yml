@@ -8,5 +8,5 @@ build_script:
   - dotnet msbuild /p:Configuration=Release
 
 test_script:
-  - dotnet test StandartClassLibrary --framework netcoreapp2.0
-  - dotnet test StandartClassLibrary --framework net452
+  - dotnet test SomeTests --framework netcoreapp2.0
+  - dotnet test SomeTests --framework net452

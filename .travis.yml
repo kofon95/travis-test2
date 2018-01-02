@@ -18,4 +18,4 @@ script:
   - msbuild /p:Configuration=Release /p:targetframework=net452 SimpleApp.sln   # output: Release/net452
   - ls SimpleApp/bin/Release
   - ls SimpleApp/bin/Release/net452
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./StandartClassLibrary/bin/Release/net452/StandartClassLibrary.dll
+  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net452/SomeTests.dll
