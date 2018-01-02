@@ -13,11 +13,11 @@ script:
 #  - xbuild /p:Configuration=Release SimpleApp.sln
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
-  - ls StandartClassLibrary/bin/Release
-#  - dotnet restore
-  - ls StandartClassLibrary/bin/Release
 #  - dotnet build --configuration Release --framework netcoreapp2.0
-  - ls StandartClassLibrary/bin/Release
+  - dotnet restore SimpleApp
+  - ls StandartClassLibrary
+  - dotnet restore StandartClassLibrary
+  - ls StandartClassLibrary
   - msbuild /p:Configuration=Release
   - ls StandartClassLibrary/bin/Release
   - ls StandartClassLibrary/bin/Release/net452
