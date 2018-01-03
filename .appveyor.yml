@@ -12,6 +12,5 @@ test_script:
   - #--framework netcoreapp2.0 and net452
   - dotnet test SomeTests
   # direct tests
-  - .\testrunner\xunit.runner.console.2.3.1\tools\net452\xunit.console.exe .\SomeTests\bin\{configuration}\net452\SomeTests.dll
   - .\testrunner\xunit.runner.console.2.3.1\tools\net452\xunit.console.exe .\SomeTests\bin\$CONFIGURATION\net452\SomeTests.dll
   - .\testrunner\xunit.runner.console.2.3.1\tools\net452\xunit.console.exe .\SomeTests\bin\%CONFIGURATION%\net452\SomeTests.dll
