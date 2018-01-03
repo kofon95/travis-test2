@@ -1,6 +1,6 @@
 language: csharp
 solution: SimpleApp.sln
-mono: none #5.0.0
+mono: 5.0.0
 dotnet: 2.0.0
 
 install:
@@ -19,5 +19,5 @@ script:
   - dotnet ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.dll ./SomeTests/bin/Release/netcoreapp2.0/SomeTests.dll
 
   # xunit: net452 tests net40
-#  - msbuild SomeTests /p:Configuration=Release /p:targetframework=net452
-#  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net452/SomeTests.dll
+  - msbuild SomeTests /p:Configuration=Release /p:targetframework=net452
+  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net452/SomeTests.dll
