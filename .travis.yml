@@ -16,6 +16,6 @@ script:
 #  - dotnet build --configuration Release --framework netcoreapp2.0
   
   - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
-  - dotnet test SomeTests --framework netcoreapp2.0
+  - dotnet test SomeTests --framework netcoreapp2.0 --configuration Release
   - dotnet ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.dll ./SomeTests/bin/Release/netcoreapp2.0/SomeTests.dll
-  - dotnet msbuild
+  - dotnet msbuild SomeTests
