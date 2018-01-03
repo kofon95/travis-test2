@@ -5,7 +5,7 @@ dotnet: 2.0.0
 
 install:
   - dotnet restore
-  - nuget restore
+  #- nuget restore
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
 
 script:
