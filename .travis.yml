@@ -4,9 +4,9 @@ mono: 5.0.0
 dotnet: 2.0.0
 
 install:
-  - nuget restore SimpleApp
-  - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
   - dotnet restore
+  - nuget restore SimpleApp.sln
+  - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
 
 script:
   # build: net40, standard1.1, standard2.0
