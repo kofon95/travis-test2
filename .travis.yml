@@ -1,7 +1,6 @@
 language: csharp
 solution: SimpleApp.sln
-msbuild: 15.5.180
-mono: 5.0.0
+mono: none #5.0.0
 dotnet: 2.0.0
 
 install:
@@ -10,15 +9,15 @@ install:
   - dotnet restore
 
 script:
-  # building
+  # build: net40, standard1.1, standard2.0
   - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
   - dotnet build ./SimpleApp --configuration Release --framework netstandard1.1
   - dotnet build ./SimpleApp --configuration Release --framework netstandard2.0
   
-  # testing
+  # xunit: netcoreapp2.0 tests netstandard2.0
   - dotnet test SomeTests --framework netcoreapp2.0 --configuration Release
   - dotnet ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.dll ./SomeTests/bin/Release/netcoreapp2.0/SomeTests.dll
 
-  # xunit net452 runs net40
-  - msbuild SomeTests /p:Configuration=Release /p:targetframework=net452
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net452/SomeTests.dll
+  # xunit: net452 tests net40
+#  - msbuild SomeTests /p:Configuration=Release /p:targetframework=net452
+#  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net452/SomeTests.dll
