@@ -12,7 +12,11 @@ namespace SomeTests
             Assert.True(a == 8, "some message!");
         }
 
-        [Fact(DisplayName = "Skipped Test", Skip = "Just skip for a moment")]
+#if NET452
+        [Fact(DisplayName = "Skipped Test", Skip = "Just skip for NET452")]
+#else
+        [Fact(DisplayName = "Skipped Test", Skip = "Just skip for [other]")]
+#endif
         void Skipped()
         {
             Assert.True(false);
