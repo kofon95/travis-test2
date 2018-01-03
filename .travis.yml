@@ -20,7 +20,7 @@ script:
   - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net40/SomeTests.dll
 #  - ls SimpleApp/bin/Release
 #  - ls SimpleApp/bin/Release/net40
-  - dotnet build --framework netstandart1.2
+  - dotnet build --framework netstandard1.2
   - dotnet build
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/netstandart1.2/SomeTests.dll
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.exe ./SomeTests/bin/Release/netstandart2.0/SomeTests.dll
+  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/netstandard1.2/SomeTests.dll
+  - mono ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.exe ./SomeTests/bin/Release/netstandard2.0/SomeTests.dll
