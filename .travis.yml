@@ -10,12 +10,13 @@ install:
   - dotnet restore
 
 script:
-  - echo "--------"
-#  - dotnet test ./StandartClassLibrary --configuration Release --framework netcoreapp2.0
-#  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
-#  - dotnet build --configuration Release --framework netcoreapp2.0
-  
+  # building
   - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
+  - dotnet build ./SimpleApp --configuration Release --framework netstandard1.1
+  - dotnet build ./SimpleApp --configuration Release --framework netstandard2.0
+  
+  # testing
   - dotnet test SomeTests --framework netcoreapp2.0 --configuration Release
   - dotnet ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.dll ./SomeTests/bin/Release/netcoreapp2.0/SomeTests.dll
-  #- dotnet msbuild SomeTests
+  - dotnet msbuild SomeTests /p:Configuration=Release /p:targetframework=net452
+  - msbuild SomeTests /p:Configuration=Release /p:targetframework=net452
