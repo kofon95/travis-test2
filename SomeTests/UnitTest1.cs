@@ -10,7 +10,6 @@ namespace SomeTests
         {
             var a = SimpleApp.Program.Sum((3, 5));
             Assert.True(a == 8, "some message!");
-            Assert.True(false, SimpleApp.Program.Run());
         }
 
 #if NET452
