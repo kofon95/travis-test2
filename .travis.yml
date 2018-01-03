@@ -8,7 +8,7 @@ install:
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
 
 script:
-  # build: net40, standard1.1, standard2.0
+  # build: net40, netstandard1.1, netstandard2.0
   - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
   - dotnet build ./SimpleApp --configuration Release --framework netstandard1.1
   - dotnet build ./SimpleApp --configuration Release --framework netstandard2.0
