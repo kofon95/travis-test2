@@ -16,10 +16,10 @@ script:
 #  - dotnet test ./StandartClassLibrary --configuration Release --framework net452
 #  - dotnet build --configuration Release --framework netcoreapp2.0
   
-  - xbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp.sln   # output: Release/net40
-  - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net40/SomeTests.dll
-  - dotnet build
-  - ls ./testrunner/xunit.runner.console.2.3.1/tools/
-  - ls ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/netstandart1.2/SomeTests.dll
+  - xbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
+#  - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
+#  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net40/SomeTests.dll
+#  - dotnet build
+#  - ls ./testrunner/xunit.runner.console.2.3.1/tools/
+#  - ls ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/
+#  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/netstandart1.2/SomeTests.dll
