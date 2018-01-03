@@ -16,9 +16,5 @@ script:
 #  - dotnet build --configuration Release --framework netcoreapp2.0
   
   - msbuild /p:Configuration=Release /p:targetframework=net40 SimpleApp   # output: Release/net40
-  - dotnet test SomeTests
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/net452/SomeTests.dll
-  - dotnet build
-  - ls ./testrunner/xunit.runner.console.2.3.1/tools/
-  - ls ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/
-  - mono ./testrunner/xunit.runner.console.2.3.1/tools/net452/xunit.console.exe ./SomeTests/bin/Release/netstandart1.2/SomeTests.dll
+  - dotnet test SomeTests --framework netstandard2.0
+  - dotnet ./testrunner/xunit.runner.console.2.3.1/tools/netcoreapp2.0/xunit.console.exe ./SomeTests/bin/Release/netstandard2.0/SomeTests.dll
