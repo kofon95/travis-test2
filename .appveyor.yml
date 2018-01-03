@@ -9,7 +9,7 @@ build_script:
   - nuget install xunit.runner.console -Version 2.3.1 -OutputDirectory testrunner
 
 test_script:
-  - dotnet test SomeTests --framework netcoreapp2.0
-  - dotnet test SomeTests --framework net452
+  - #--framework netcoreapp2.0 and net452
+  - dotnet test SomeTests
   # direct tests
   - .\testrunner\xunit.runner.console.2.3.1\tools\net452\xunit.console.exe .\SomeTests\bin\Release\net452\SomeTests.dll
